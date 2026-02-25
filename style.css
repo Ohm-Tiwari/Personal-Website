@@ -39,7 +39,7 @@ header{
 
 .logo{
     font-size: 3rem;
-    color: #0a3cd1;
+    color: #4481eb;
     font-weight: 800;
     cursor: pointer;
     transition: 0.5s ease;
@@ -253,6 +253,118 @@ span{
     position: absolute;
     left: 0;
     font-weight: bold;
+}
+
+.exp-item {
+    display: flex;
+    align-items: center; 
+    gap: 40px;         
+    margin-bottom: 50px;
+    padding: 20px;
+    max-width: 900px;   
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.exp-img-frame {
+    flex: 0 0 250px;     
+    height: 150px;      
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.exp-img-frame img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.exp-text {
+    flex: 1;             
+    font-size: 16;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.exp-text h3 {
+    font-size: 1.8rem;     
+    color: #4481eb;       
+    margin-bottom: 10px;    
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+
+@media (max-width: 768px) {
+    .exp-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    .exp-text {
+        text-align: center;
+    }
+}
+
+.experience-section {
+    padding: 100px 10% 60px; 
+    min-height: auto; 
+    background: #23153c; 
+}
+
+.section-title {
+    font-size: 3rem;
+    color: #4481eb;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.exp-item {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    gap: 60px;               
+    margin-bottom: 80px;    
+    width: 100%;
+}
+
+
+.exp-img-frame {
+    flex: 0 0 350px;        
+    height: 200px;           
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.exp-img-frame img {
+    width: 100%;             
+    height: auto;
+    max-height: 200px;
+    object-fit: contain;
+}
+
+.exp-text p {
+    font-size: 1.5rem;       
+    color: white;
+    max-width: 600px;        
+    line-height: 1.5;
+}
+
+
+
+
+/* The initial hidden state */
+.reveal {
+    position: relative;
+    opacity: 0;
+    transform: translateY(50px); 
+    transition: all 0.8s ease-out; 
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 

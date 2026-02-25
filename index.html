@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Ohm Tiwari | Portfolio</title>
+    <link rel="icon" type="image/webp" href="globe.webp"
 </head>
 <body>
     <header>
@@ -20,9 +21,6 @@
     </header>
 
     <section class="home" id="home">
-        <!-- <div class="home-img">
-            <img src="main.jpeg" alt="Ohm Tiwari">
-        </div> -->
         <div class="home-content">
             <h1>Hi, I'm <span>Ohm</span></h1>
             <h3 class="typing-text">I'm a <span></span></h3>
@@ -35,18 +33,54 @@
         </div>
     </section>
 
-    <section class="home" id="experience">
-        <div class="home-content">
-            <h1><span>Experience</span></h1>
-            <p>Currently, I serve as a Power Platform Consultant, where I develop custom solutions for clients in various industries.</p>
-        </div>
-    </section>
 
-    <section class="home" id="education">
-        <div class="home-content">
-            <h1><span>Education</span></h1>
-            <p>I graduated from Indiana University - Bloomington with a BS in Computer Science and minors in Data Science and Business.</p>
-            
+<section class="experience-section" id="experience">
+    <h1 class="section-title reveal">Experience</h1>
+    
+    <div class="exp-item reveal">
+        <div class="exp-img-frame">
+            <img src="RSM.png" alt="RSM">
+        </div>
+        <div class="exp-text">
+            <h3>RSM <span>| Microsoft AI Consultant</span></h3>
+            <p>I currently implement automated workflows and dashboards with Agents. Examples include PowerBI Dashboards as well as customer support chabots.</p>
+        </div>
+    </div>
+
+    <div class="exp-item reveal">
+        <div class="exp-img-frame">
+            <img src="Levy.webp" alt="Levy">
+        </div>
+        <div class="exp-text">
+            <h3>Levy Restuarants <span>| Corporate Strategy Intern</span></h3>
+            <p>Designed chatbot with RAG integration for competitor intelligence; automated newsletter delivery via OpenAI API and Power Automate. Created automated AR dashboard using Power BI, Power Automate, and Excel. Leveraged automation for daily data refresh. Developed sports market dashboard to access team information, including upcoming contract expirations with Tableau and Power BI.</p>
+        </div>
+    </div>
+
+    <div class="exp-item reveal">
+        <div class="exp-img-frame">
+            <img src="nbc.png" alt="NBC">
+        </div>
+        <div class="exp-text">
+            <h3>NBCUniversal <span>| Data Mesh Intern</span></h3>
+            <p>Working with the MLOps team, I implemented a box office receipt (BOR) OCR using VertexAI which automatically transferred data to BigQuery. I also created two summarizer POCs utilizing GPT3.5 within 
+                AWS Sagemaker and Lambda. They summarized meeting transcripts as well as Jira scrum boards. I also led my team of interns to victory in a sharepoint redesign of the NBCUniversal TechWomen website.</p>
+        </div>
+    </div>
+</section>
+    
+
+
+<section class="experience-section" id="education">
+    <h1 class="section-title reveal">Education</h1>
+    
+    <div class="exp-item reveal">
+        <div class="exp-img-frame">
+            <img src="IU.png" alt="IU">
+        </div>
+        <div class="exp-text">
+            <h3>Indiana University <span>| 2021-2025</span></h3>
+            <p>I graduated with a BS in Computer Science and minors in Data Science and Business.</p>
             <p>I have the following certifications from Microsoft:</p>
             <ul class="cert-list">
                 <li>AI-900: Microsoft Azure AI Fundamentals</li>
@@ -54,7 +88,9 @@
                 <li>PL-900: Microsoft Power Platform Fundamentals</li>
             </ul>
         </div>
-    </section>
+    </div>
+
+</section>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
@@ -74,6 +110,26 @@
             backgroundColor: 0x23153c, 
             size: 1.10
         })
+
+        const observerOptions = {
+        threshold: 0.15 // Triggers when 15% of the element is visible
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                // Optional: Stop observing after it appears once
+                // observer.unobserve(entry.target); 
+            }
+        });
+    }, observerOptions);
+
+    // Tell the observer to watch everything with the 'reveal' class
+    const revealElements = document.querySelectorAll('.reveal');
+    revealElements.forEach(el => observer.observe(el));
+
+
     });
 </script>
 
