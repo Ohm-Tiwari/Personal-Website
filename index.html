@@ -10,6 +10,7 @@
     <link rel="icon" type="image/webp" href="globe.webp"
 </head>
 <body>
+    <div id="globe-bg"></div>
     <header>
         <a href="#home" class="logo">Ohm</a>
 
@@ -24,7 +25,7 @@
         <div class="home-content">
             <h1>Hi, I'm <span>Ohm</span></h1>
             <h3 class="typing-text">I'm a <span></span></h3>
-            <p>I am a Microsoft AI Consultant based in Chicago. I implement automated workflows and dashboards with Agents.</p>
+            <p>I am based in Chicago. I implement data workflows and dashboards with agents.</p>
             <div class="social-icons">
                 <a href="https://www.linkedin.com/in/ohm-tiwari/"><i class="fa-brands fa-linkedin"></i></a>
                 <a href="https://github.com/Ohm-Tiwari"><i class="fa-brands fa-github"></i></a>
@@ -43,7 +44,7 @@
         </div>
         <div class="exp-text">
             <h3>RSM <span>| Microsoft AI Consultant</span></h3>
-            <p>I currently implement automated workflows and dashboards with Agents. Examples include PowerBI Dashboards as well as customer support chabots.</p>
+            <p>I currently implement automated workflows and dashboards with Agents. Examples include PowerBI Dashboards as well as customer support chatbots. I also build solutions in the Microsoft Power Platform.</p>
         </div>
     </div>
 
@@ -80,8 +81,8 @@
         </div>
         <div class="exp-text">
             <h3>Indiana University <span>| 2021-2025</span></h3>
-            <p>I graduated with a BS in Computer Science and minors in Data Science and Business.</p>
-            <p>I have the following certifications from Microsoft:</p>
+            <p>Bachelors of Science in Computer Science and minors in Data Science and Business.</p>
+            <p>Certifications from Microsoft:</p>
             <ul class="cert-list">
                 <li>AI-900: Microsoft Azure AI Fundamentals</li>
                 <li>AZ-900: Microsoft Azure Fundamentals</li>
@@ -98,7 +99,7 @@
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         VANTA.GLOBE({
-            el: "#home", 
+            el: "#globe-bg",
             mouseControls: true,
             touchControls: true,
             gyroControls: false,
@@ -106,8 +107,9 @@
             minWidth: 200.00,
             scale: 1.00,
             scaleMobile: 1.00,
-            color: 0x0a3cd1,      
-            backgroundColor: 0x23153c, 
+            color: 0x3f6eff,
+            color2: 0x16f400,      
+            backgroundColor: 0x0a192f, 
             size: 1.10
         })
 
