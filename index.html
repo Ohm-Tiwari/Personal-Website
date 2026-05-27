@@ -40,7 +40,7 @@
     
     <div class="exp-item reveal">
         <div class="exp-img-frame">
-            <img src="RSM.png" alt="RSM">
+            <img src="images/RSM.png" alt="RSM">
         </div>
         <div class="exp-text">
             <h3>RSM <span>| Microsoft AI Consultant</span></h3>
@@ -50,7 +50,7 @@
 
     <div class="exp-item reveal">
         <div class="exp-img-frame">
-            <img src="Levy.webp" alt="Levy">
+            <img src="images/Levy.webp" alt="Levy">
         </div>
         <div class="exp-text">
             <h3>Levy Restuarants <span>| Corporate Strategy Intern</span></h3>
@@ -60,7 +60,7 @@
 
     <div class="exp-item reveal">
         <div class="exp-img-frame">
-            <img src="nbc.png" alt="NBC">
+            <img src="images/nbc.png" alt="NBC">
         </div>
         <div class="exp-text">
             <h3>NBCUniversal <span>| Data Mesh Intern</span></h3>
@@ -77,7 +77,7 @@
     
     <div class="exp-item reveal">
         <div class="exp-img-frame">
-            <img src="IU.png" alt="IU">
+            <img src="images/IU.png" alt="IU">
         </div>
         <div class="exp-text">
             <h3>Indiana University <span>| 2021-2025</span></h3>
@@ -114,20 +114,18 @@
         })
 
         const observerOptions = {
-        threshold: 0.15 // Triggers when 15% of the element is visible
+        threshold: 0.15 
     };
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
-                // Optional: Stop observing after it appears once
-                // observer.unobserve(entry.target); 
+
             }
         });
     }, observerOptions);
 
-    // Tell the observer to watch everything with the 'reveal' class
     const revealElements = document.querySelectorAll('.reveal');
     revealElements.forEach(el => observer.observe(el));
 
